@@ -1,0 +1,102 @@
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>GAAS - Cause we love goats</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="keywords" content="Shape Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+        Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+        <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+        <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery.min.js"></script>
+        <!-- Custom Theme files -->
+        <link href="css/style.css" rel='stylesheet' type='text/css' />
+        <!-- Custom Theme files -->
+        <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet' type='text/css'>
+        <script src="js/jquery.easydropdown.js"></script>
+
+        <!-- Cognito library file -->
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.41.0.min.js"></script>
+        <script src="js/amazon-cognito-identity.min.js"></script>
+        <script src="js/identityConstants.js"></script>
+
+        <script>
+            window.onload = function(){
+
+                var data = { UserPoolId : USERPOOLID,
+                    ClientId : CLIENTID
+                };
+
+                var userPool = new AmazonCognitoIdentity.CognitoUserPool(data);
+                var cognitoUser = userPool.getCurrentUser();
+
+                if (cognitoUser != null) {
+                    cognitoUser.signOut();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt=""/></a>
+                    </div>
+                    <div class="banner_right"><h2 id="wc-message"></h2></div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="apparel_box">
+
+                </div>
+            </div>
+        </div>
+        <div class="main">
+
+            <div class="container">
+                <div class="register">
+                    <div class="register-top-grid">
+                        <h2>You have been successfully logged out! </h2>
+                        <a class="acount-btn" href="index.html">Go back home</a>
+                        <a class="acount-btn" href="login.html">Log in again</a>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- main -->
+        <div class="footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <h3>Newsletter</h3>
+                    <p class="footer_desc">You goat to stay up to date, suscribe to our goat newsletter.</p>
+                    <div class="search_footer">
+                        <input type="text" class="text" value="Insert Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Insert Email';}">
+                        <input type="submit" value="Submit">
+                    </div>
+                    <p class="footer_desc">We don't accept the next paying methods:</p>
+                    <img src="images/payment.png" class="img-responsive" alt=""/>
+                </div>
+                <div class="footer-grid footer-grid_last">
+                    <h3>About Us</h3>
+                    <p class="footer_desc">For all the services listed above, ours is unique, environmentally friendly and really works. Our customers see their land cleared of unwanted vegetation while not having to employ loud machines or use harmful chemicals.</p>
+                    <p class="f_text">Phone:  &nbsp;&nbsp;01-800-GOAT</p>
+                    <p class="email">Email: &nbsp;&nbsp;&nbsp;<a href="#">yougoatme@gaas.com</a></p>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="copy">
+                    <p>Copyright &copy; 1865 GAAS. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
